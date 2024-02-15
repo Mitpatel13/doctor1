@@ -1,0 +1,13 @@
+// export 'big_text.dart';
+// export 'small_text.dart';
+// export 'ProfileAvatar.dart';
+// export 'Custom_tab_bar.dart';
+// export 'IconTextCol.dart';
+// export 'uploadImageDisplay.dart';
+// export 'banners.dart';
+// export 'customAppbar.dart';
+// export 'bookedslot.dart';
+// export 'availabletime.dart';
+// export 'paymentList.dart';
+// export 'dailyslotwidget.dart';
+// export 'editicon.dart';
