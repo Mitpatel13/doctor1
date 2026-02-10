@@ -77,6 +77,17 @@ Notes:
 - If you want the script to create repos through GitHub CLI, install/auth `gh` and run with `USE_GH_CLI=true`.
 - Output repositories are staged under `exported-repos/` before push.
 
+
+### Admin-only repo push
+
+If you only want to publish admin code (no Flutter app), run:
+
+```bash
+GITHUB_USERNAME=<your-user> \
+ADMIN_REPO=spark-admin \
+./scripts/create_and_push_admin_repo.sh
+```
+
 ## 🧪 Useful Checks
 
 ```bash
