@@ -1,16 +1,86 @@
-# vidhya_doctors
+# 📘 Spark Dating — Project Documentation
 
-A new Flutter project.
+## 🔥 Project Overview
 
-## Getting Started
+**Spark Dating** contains:
 
-This project is a starting point for a Flutter application.
+- A **Flutter mobile app** (root folder)
+- A **React + Vite admin panel** (`admin-panel/`)
+- Firebase integration for Auth / Firestore / Storage
 
-A few resources to get you started if this is your first Flutter project:
+This repository is currently organized as a mono-repo so both projects can be developed together. A helper script is included to split and push both apps into two independent GitHub repositories.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🧠 Features & Functionalities
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📱 Mobile App (Flutter)
+
+- Phone auth and account flows
+- Profile and doctor/discovery style listing screens
+- Booking, slot, payment, review modules
+- GetX-based state management
+
+### 🖥 Admin Panel (React)
+
+- Starter dashboard page
+- Starter users page
+- Firebase config wiring (`src/firebase.js`)
+
+## 📂 Code Structure
+
+```text
+.
+├── admin-panel/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── firebase.js
+│   │   └── pages/
+│   ├── package.json
+│   └── vite.config.js
+├── lib/                    # Flutter mobile app source
+├── android/ ios/ web/ ...  # Flutter platform targets
+├── scripts/
+│   └── create_and_push_spark_repos.sh
+└── pubspec.yaml
+```
+
+## 🚀 Run Locally
+
+### Mobile app
+
+```bash
+flutter pub get
+flutter run
+```
+
+### Admin panel
+
+```bash
+cd admin-panel
+npm install
+npm run dev
+```
+
+## ⬆️ Create New Repos and Push (Mobile + Admin)
+
+Use the included script:
+
+```bash
+GITHUB_USERNAME=<your-user> \
+MOBILE_REPO=spark-mobile-app \
+ADMIN_REPO=spark-admin-panel \
+./scripts/create_and_push_spark_repos.sh
+```
+
+Notes:
+
+- If the target repos already exist on GitHub, the script pushes directly.
+- If you want the script to create repos through GitHub CLI, install/auth `gh` and run with `USE_GH_CLI=true`.
+- Output repositories are staged under `exported-repos/` before push.
+
+## 🧪 Useful Checks
+
+```bash
+flutter analyze
+flutter test
+cd admin-panel && npm run build
+```

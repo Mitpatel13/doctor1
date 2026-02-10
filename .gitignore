@@ -42,3 +42,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Admin panel / repo export artifacts
+admin-panel/node_modules/
+admin-panel/dist/
+exported-repos/
