@@ -23,7 +23,7 @@ This repository is currently organized as a mono-repo so both projects can be de
 
 - Dashboard reads live Firestore counts (`users`, `matches`)
 - Users page lists and filters Firestore users
-- Firebase config wiring (`src/firebase.js`)
+- Firebase config wiring (`src/firebase.js`) with Spark project defaults
 
 ## 📂 Code Structure
 
@@ -60,6 +60,13 @@ npm install
 npm run dev
 ```
 
+The admin panel already includes Spark Firebase defaults. You can still override with env vars in deployment if needed (`VITE_FIREBASE_*`).
+
+
+### Optional Firebase env overrides
+
+- `VITE_FIREBASE_MEASUREMENT_ID`
+- `VITE_FIREBASE_DATABASE_URL`
 
 ### Firestore fields expected by dashboard
 
