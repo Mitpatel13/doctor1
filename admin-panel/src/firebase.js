@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { getApps, initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -10,6 +10,24 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
+const requiredKeys = [
+  'apiKey',
+  'authDomain',
+  'projectId',
+  'storageBucket',
+  'messagingSenderId',
+  'appId',
+];
 
-export const db = getFirestore(app);
+export const missingFirebaseKeys = requiredKeys.filter((key) => !firebaseConfig[key]);
+export const isFirebaseConfigured = missingFirebaseKeys.length === 0;
+
+let app;
+let db = null;
+
+if (isFirebaseConfigured) {
+  app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+  db = getFirestore(app);
+}
+
+export { db };

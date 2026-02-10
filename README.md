@@ -21,8 +21,8 @@ This repository is currently organized as a mono-repo so both projects can be de
 
 ### 🖥 Admin Panel (React)
 
-- Starter dashboard page
-- Starter users page
+- Dashboard reads live Firestore counts (`users`, `matches`)
+- Users page lists and filters Firestore users
 - Firebase config wiring (`src/firebase.js`)
 
 ## 📂 Code Structure
@@ -59,6 +59,12 @@ cd admin-panel
 npm install
 npm run dev
 ```
+
+
+### Firestore fields expected by dashboard
+
+- `users.lastActiveAt` (timestamp) for daily active users
+- `matches.createdAt` (timestamp) for new matches today
 
 ## ⬆️ Create New Repos and Push (Mobile + Admin)
 
