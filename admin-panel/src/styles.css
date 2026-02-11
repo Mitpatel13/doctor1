@@ -1,0 +1,133 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #e6eef8;
+  background: #090f1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px circle at 0 0, #1a2750 0%, #090f1c 45%, #060a14 100%);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  background: linear-gradient(120deg, #243b8a, #b126ff);
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.hero p {
+  margin: 0.4rem 0 0;
+  color: #f7eefe;
+}
+
+.warning {
+  margin-top: 1rem;
+  background: #3a1518;
+  border: 1px solid #6a2027;
+  border-radius: 12px;
+  color: #ffcfcc;
+  padding: 0.85rem 1rem;
+}
+
+.grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.85rem;
+}
+
+.card {
+  background: rgba(17, 26, 46, 0.92);
+  border: 1px solid rgba(96, 122, 168, 0.35);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  color: #adbeff;
+  font-size: 0.95rem;
+}
+
+.metric {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-title {
+  margin: 1.25rem 0 0.75rem;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input,
+.button,
+.select {
+  border-radius: 10px;
+  border: 1px solid #334c7f;
+  background: #101a30;
+  color: #e6eef8;
+  padding: 0.55rem 0.7rem;
+}
+
+.button {
+  cursor: pointer;
+  background: linear-gradient(120deg, #2d74ff, #8338ec);
+  border: none;
+}
+
+.table-wrap {
+  margin-top: 1rem;
+  overflow: auto;
+  border: 1px solid #2f4066;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+  background: #0e172a;
+}
+
+th,
+td {
+  padding: 0.7rem;
+  border-bottom: 1px solid #1e2b4a;
+  text-align: left;
+}
+
+th {
+  color: #9fb8ff;
+  background: #101d36;
+}
+
+.muted {
+  color: #98a7c8;
+}
+
+.error {
+  color: #ff9f9f;
+}
